@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CC91463354D90D67725A400 /* Pods_PetM15Talks_002.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C48EE5E8D5637FF7C472B9 /* Pods_PetM15Talks_002.framework */; };
 		94B36AC52738468400C77E20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B36AC42738468400C77E20 /* AppDelegate.swift */; };
 		94B36AC72738468400C77E20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B36AC62738468400C77E20 /* SceneDelegate.swift */; };
 		94B36AC92738468400C77E20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B36AC82738468400C77E20 /* ViewController.swift */; };
 		94B36ACC2738468400C77E20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B36ACA2738468400C77E20 /* Main.storyboard */; };
 		94B36ACE2738468400C77E20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94B36ACD2738468400C77E20 /* Assets.xcassets */; };
 		94B36AD12738468400C77E20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94B36ACF2738468400C77E20 /* LaunchScreen.storyboard */; };
+		94B36AD9273848BB00C77E20 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94B36AD8273848BB00C77E20 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		87D371698CA5A309C00693BD /* Pods-PetM15Talks_002.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetM15Talks_002.debug.xcconfig"; path = "Target Support Files/Pods-PetM15Talks_002/Pods-PetM15Talks_002.debug.xcconfig"; sourceTree = "<group>"; };
 		94B36AC12738468400C77E20 /* PetM15Talks_002.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetM15Talks_002.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B36AC42738468400C77E20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94B36AC62738468400C77E20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		94B36ACD2738468400C77E20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94B36AD02738468400C77E20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94B36AD22738468400C77E20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94B36AD8273848BB00C77E20 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9D153631A67AC96D9B37B8D6 /* Pods-PetM15Talks_002.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetM15Talks_002.release.xcconfig"; path = "Target Support Files/Pods-PetM15Talks_002/Pods-PetM15Talks_002.release.xcconfig"; sourceTree = "<group>"; };
+		C4C48EE5E8D5637FF7C472B9 /* Pods_PetM15Talks_002.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PetM15Talks_002.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CC91463354D90D67725A400 /* Pods_PetM15Talks_002.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7800F44A79720981DB68E04A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				87D371698CA5A309C00693BD /* Pods-PetM15Talks_002.debug.xcconfig */,
+				9D153631A67AC96D9B37B8D6 /* Pods-PetM15Talks_002.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		94B36AB82738468400C77E20 = {
 			isa = PBXGroup;
 			children = (
 				94B36AC32738468400C77E20 /* PetM15Talks_002 */,
 				94B36AC22738468400C77E20 /* Products */,
+				7800F44A79720981DB68E04A /* Pods */,
+				D9B7B0FE0E2A1DB8B927D9B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,9 +81,18 @@
 				94B36ACA2738468400C77E20 /* Main.storyboard */,
 				94B36ACD2738468400C77E20 /* Assets.xcassets */,
 				94B36ACF2738468400C77E20 /* LaunchScreen.storyboard */,
+				94B36AD8273848BB00C77E20 /* GoogleService-Info.plist */,
 				94B36AD22738468400C77E20 /* Info.plist */,
 			);
 			path = PetM15Talks_002;
+			sourceTree = "<group>";
+		};
+		D9B7B0FE0E2A1DB8B927D9B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4C48EE5E8D5637FF7C472B9 /* Pods_PetM15Talks_002.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94B36AD52738468400C77E20 /* Build configuration list for PBXNativeTarget "PetM15Talks_002" */;
 			buildPhases = (
+				FCB0B3D5FE2571639FFBB3F5 /* [CP] Check Pods Manifest.lock */,
 				94B36ABD2738468400C77E20 /* Sources */,
 				94B36ABE2738468400C77E20 /* Frameworks */,
 				94B36ABF2738468400C77E20 /* Resources */,
+				DC6B30AC53461C1C80BA3FFB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +156,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				94B36AD12738468400C77E20 /* LaunchScreen.storyboard in Resources */,
+				94B36AD9273848BB00C77E20 /* GoogleService-Info.plist in Resources */,
 				94B36ACE2738468400C77E20 /* Assets.xcassets in Resources */,
 				94B36ACC2738468400C77E20 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DC6B30AC53461C1C80BA3FFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PetM15Talks_002/Pods-PetM15Talks_002-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PetM15Talks_002/Pods-PetM15Talks_002-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PetM15Talks_002/Pods-PetM15Talks_002-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FCB0B3D5FE2571639FFBB3F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PetM15Talks_002-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		94B36ABD2738468400C77E20 /* Sources */ = {
@@ -284,6 +357,7 @@
 		};
 		94B36AD62738468400C77E20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87D371698CA5A309C00693BD /* Pods-PetM15Talks_002.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -294,8 +368,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,12 +381,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		94B36AD72738468400C77E20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D153631A67AC96D9B37B8D6 /* Pods-PetM15Talks_002.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -321,8 +398,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,7 +411,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
