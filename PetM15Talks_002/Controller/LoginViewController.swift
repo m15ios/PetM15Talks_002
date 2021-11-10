@@ -10,21 +10,29 @@ import UIKit
 class LoginViewController: ViewController {
 
     var collectionView: UICollectionView!
+    lazy var loginSlides: Array<LoginSliderItem>? = nil
     
     let nameSlideCellView: String = "LoginSlideCollectionViewCell"
     
+    
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
+        if let slides = getLoginSliderItems() {
+            loginSlides = slides
+        }
         configCollectionView()
-        // Do any additional setup after loading the view.
+        super.viewDidLoad()
     }
     
     func configCollectionView(){
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 0
         
         collectionView = UICollectionView( frame: self.view.frame, collectionViewLayout: layout)
         collectionView.backgroundColor = .orange
+        // slide to paging
+        collectionView.isPagingEnabled = true
         
         // add to view
         self.view.addSubview( collectionView )
@@ -51,11 +59,17 @@ class LoginViewController: ViewController {
 
 extension LoginViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        if let cnt = loginSlides?.count {
+            return cnt
+        }
+        return 0;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: self.nameSlideCellView, for: indexPath ) as! LoginSlideCollectionViewCell
+        if let slide = loginSlides?[indexPath.row] {
+            cell.configure(content: slide)
+        }
         return cell
     }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8CC91463354D90D67725A400 /* Pods_PetM15Talks_002.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C48EE5E8D5637FF7C472B9 /* Pods_PetM15Talks_002.framework */; };
+		94AF5882273C413A003DCE39 /* LoginSliderItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF5881273C413A003DCE39 /* LoginSliderItems.swift */; };
 		94B36AC52738468400C77E20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B36AC42738468400C77E20 /* AppDelegate.swift */; };
 		94B36AC72738468400C77E20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B36AC62738468400C77E20 /* SceneDelegate.swift */; };
 		94B36AC92738468400C77E20 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B36AC82738468400C77E20 /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		87D371698CA5A309C00693BD /* Pods-PetM15Talks_002.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetM15Talks_002.debug.xcconfig"; path = "Target Support Files/Pods-PetM15Talks_002/Pods-PetM15Talks_002.debug.xcconfig"; sourceTree = "<group>"; };
+		94AF5881273C413A003DCE39 /* LoginSliderItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSliderItems.swift; sourceTree = "<group>"; };
 		94B36AC12738468400C77E20 /* PetM15Talks_002.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetM15Talks_002.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B36AC42738468400C77E20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94B36AC62738468400C77E20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		94BB22BE27399FE200A7B751 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				94AF5881273C413A003DCE39 /* LoginSliderItems.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				94BB22C42739AB3A00A7B751 /* LoginSlideCollectionViewCell.swift in Sources */,
 				94B36AC52738468400C77E20 /* AppDelegate.swift in Sources */,
 				94B36AC72738468400C77E20 /* SceneDelegate.swift in Sources */,
+				94AF5882273C413A003DCE39 /* LoginSliderItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

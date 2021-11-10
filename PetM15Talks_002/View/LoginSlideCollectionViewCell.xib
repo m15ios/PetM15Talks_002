@@ -42,11 +42,17 @@
                                 <rect key="frame" x="101" y="394" width="67" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
+                                <connections>
+                                    <action selector="slideLoginBTN:" destination="gTV-IL-0wX" eventType="touchUpInside" id="4Ba-wH-IGg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qFY-nR-eRY">
                                 <rect key="frame" x="101" y="442" width="67" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Join"/>
+                                <connections>
+                                    <action selector="slideJoinBTN:" destination="gTV-IL-0wX" eventType="touchUpInside" id="eLn-gc-4es"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -77,6 +83,9 @@
                 <constraint firstAttribute="bottom" secondItem="Fic-BL-Mcs" secondAttribute="bottom" id="xul-KQ-Ofg"/>
             </constraints>
             <size key="customSize" width="268" height="499"/>
+            <connections>
+                <outlet property="slideMainText" destination="Pbr-NZ-qAe" id="eGX-5J-UCc"/>
+            </connections>
             <point key="canvasLocation" x="-17.39130434782609" y="175.11160714285714"/>
         </collectionViewCell>
     </objects>
