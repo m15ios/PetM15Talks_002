@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="PetM15Talks_002" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="PetM15Talks_002" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,6 +23,86 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="65"/>
+        </scene>
+        <!--Registration View Controller-->
+        <scene sceneID="rRV-Cf-bDf">
+            <objects>
+                <viewController storyboardIdentifier="RegistrationViewController" id="iPf-0X-CaU" customClass="RegistrationViewController" customModule="PetM15Talks_002" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oCF-18-Fo1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YXZ-TZ-Tqm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="coF-Dx-AcR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="942" y="65"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="BdZ-5Y-S7i">
+            <objects>
+                <viewController storyboardIdentifier="AuthViewController" id="8tg-1H-3Bj" customClass="AuthViewController" customModule="PetM15Talks_002" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="enI-bX-tzt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="QvW-C8-8aa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2gE-8n-g2M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1871" y="65"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="w83-NJ-mZH">
+            <objects>
+                <viewController id="guh-4h-r48" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ita-Pk-KEe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="C8U-nn-hHR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="f9Z-sT-DK2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ABf-lg-EKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3816" y="410"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="GOf-RV-Tl0">
+            <objects>
+                <viewController id="eFq-ko-cf5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B61-6O-e7S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="esM-of-IYG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="Noo-Wz-vmK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m9s-Xe-toe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3816" y="-299"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="SOz-5f-VI7">
+            <objects>
+                <tabBarController storyboardIdentifier="MainViewController" id="T8f-xp-PMt" customClass="MainViewController" customModule="PetM15Talks_002" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lo5-ml-ncM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="eFq-ko-cf5" kind="relationship" relationship="viewControllers" id="riC-fZ-cFH"/>
+                        <segue destination="guh-4h-r48" kind="relationship" relationship="viewControllers" id="y7m-FN-bLD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rAy-dG-hSB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2839" y="64"/>
         </scene>
     </scenes>
     <resources>

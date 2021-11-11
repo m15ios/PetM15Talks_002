@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  WelcomeViewController.swift
 //  PetM15Talks_002
 //
 //  Created by Mikhail Petrenko on 08.11.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: ViewController {
+class WelcomeViewController: ViewController {
 
     var collectionView: UICollectionView!
     lazy var loginSlides: Array<LoginSliderItem>? = nil
@@ -57,7 +57,7 @@ class LoginViewController: ViewController {
 }
 
 
-extension LoginViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension WelcomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let cnt = loginSlides?.count {
             return cnt
