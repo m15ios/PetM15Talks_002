@@ -84,6 +84,8 @@
             </constraints>
             <size key="customSize" width="268" height="499"/>
             <connections>
+                <outlet property="slideJoinButton" destination="qFY-nR-eRY" id="36N-vc-Ru5"/>
+                <outlet property="slideLoginButton" destination="mb5-f2-9ea" id="fdU-rt-WcK"/>
                 <outlet property="slideMainText" destination="Pbr-NZ-qAe" id="eGX-5J-UCc"/>
             </connections>
             <point key="canvasLocation" x="-17.39130434782609" y="175.11160714285714"/>

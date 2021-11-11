@@ -10,6 +10,8 @@ import UIKit
 class LoginSlideCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var slideMainText: UILabel!
+    @IBOutlet weak var slideLoginButton: UIButton!
+    @IBOutlet weak var slideJoinButton: UIButton!
     @IBAction func slideLoginBTN(_ sender: Any) {
     }
     @IBAction func slideJoinBTN(_ sender: Any) {
@@ -22,13 +24,14 @@ class LoginSlideCollectionViewCell: UICollectionViewCell {
     
     func configure( content: LoginSliderItem ){
         slideMainText.text = content.mainText
-        /*
+        
         if( content.hideButtons == true ){
-            print( "hide buttons" )
+            slideLoginButton.isHidden = true
+            slideJoinButton.isHidden = true
         } else {
-            print( "show buttons" )
+            slideLoginButton.isHidden = false
+            slideJoinButton.isHidden = false
         }
-        */
     }
 
 }
