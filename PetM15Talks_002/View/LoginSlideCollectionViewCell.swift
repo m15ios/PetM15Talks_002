@@ -13,13 +13,21 @@ class LoginSlideCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var slideLoginButton: UIButton!
     @IBOutlet weak var slideJoinButton: UIButton!
     @IBAction func slideLoginBTN(_ sender: Any) {
+        toScreen("AuthViewController")
     }
     @IBAction func slideJoinBTN(_ sender: Any) {
+        toScreen("RegistrationViewController")
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    func toScreen( _ name: String ){
+        let currentStoryboardController = UIStoryboard(name: name, bundle: nil).instantiateViewController(identifier: name)
+        self.window?.rootViewController = currentStoryboardController
+        self.window?.makeKeyAndVisible()
     }
     
     func configure( content: LoginSliderItem ){
