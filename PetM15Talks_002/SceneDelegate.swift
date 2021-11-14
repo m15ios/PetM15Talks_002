@@ -26,6 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if userAuth == true {
             idController = "MainViewController"
         }
+        //idController = "RegistrationViewController"
         let currentStoryboardController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: idController)
         self.window?.rootViewController = currentStoryboardController
         self.window?.makeKeyAndVisible()

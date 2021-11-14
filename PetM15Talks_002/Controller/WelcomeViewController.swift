@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+class WelcomeViewController: ViewController {
 
     var collectionView: UICollectionView!
     lazy var loginSlides: Array<LoginSliderItem>? = nil
@@ -78,20 +78,5 @@ extension WelcomeViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return self.view.frame.size
     }
-    
-}
-
-protocol WelcomeViewControllerDelegate {
-    func toScreen( _ name: String)
-}
-
-extension WelcomeViewController: WelcomeViewControllerDelegate{
-    func toScreen( _ name: String ){
-        let currentStoryboardController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: name)
-        self.view.insertSubview( currentStoryboardController.view, at: 1)
-        //self.window?.rootViewController = currentStoryboardController
-        //self.window?.makeKeyAndVisible()
-    }
-
     
 }

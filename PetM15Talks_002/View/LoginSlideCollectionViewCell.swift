@@ -13,12 +13,14 @@ class LoginSlideCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var slideLoginButton: UIButton!
     @IBOutlet weak var slideJoinButton: UIButton!
     
-    var delegate: WelcomeViewControllerDelegate!
+    var delegate: ViewControllerDelegate!
     
     @IBAction func slideLoginBTN(_ sender: Any) {
+        print("click slideLoginBTN")
         delegate.toScreen("AuthViewController")
     }
     @IBAction func slideJoinBTN(_ sender: Any) {
+        print("click slideJoinBTN")
         delegate.toScreen("RegistrationViewController")
     }
     

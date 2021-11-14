@@ -9,7 +9,18 @@ import UIKit
 
 class RegistrationViewController: UIViewController {
 
+    @IBAction func clickJoinBTN(_ sender: Any) {
+        print("111")
+    }
+    
+    @IBAction func clickBackBTN(_ sender: Any) {
+        print("222")
+    }
+    
+    
+    
     override func viewDidLoad() {
+        print("reg controller")
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

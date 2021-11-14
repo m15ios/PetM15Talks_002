@@ -38,42 +38,45 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b1e-qc-PEL">
-                                <rect key="frame" x="20" y="484" width="374" height="313"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZO-ic-xUw">
-                                        <rect key="frame" x="120" y="210" width="134" height="40"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Join"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZV8-Md-Kk2">
-                                        <rect key="frame" x="120" y="258" width="134" height="40"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="back">
-                                            <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="xZO-ic-xUw" secondAttribute="trailing" constant="120" id="6h3-JC-7vJ"/>
-                                    <constraint firstItem="ZV8-Md-Kk2" firstAttribute="top" secondItem="xZO-ic-xUw" secondAttribute="bottom" constant="8" symbolic="YES" id="Ttw-nt-xdd"/>
-                                    <constraint firstItem="xZO-ic-xUw" firstAttribute="leading" secondItem="b1e-qc-PEL" secondAttribute="leading" constant="120" id="XYB-LP-lsY"/>
-                                    <constraint firstAttribute="trailing" secondItem="ZV8-Md-Kk2" secondAttribute="trailing" constant="120" id="dDL-fq-HXm"/>
-                                    <constraint firstItem="ZV8-Md-Kk2" firstAttribute="leading" secondItem="b1e-qc-PEL" secondAttribute="leading" constant="120" id="qVe-um-iqU"/>
-                                    <constraint firstAttribute="bottom" secondItem="ZV8-Md-Kk2" secondAttribute="bottom" constant="10" id="sdA-4Y-xxr"/>
-                                </constraints>
-                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdF-YF-zO7">
+                                <rect key="frame" x="95" y="254" width="225" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Join">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickJoinBTN:" destination="iPf-0X-CaU" eventType="touchUpInside" id="bPa-zE-Izs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Tp-jK-uNh">
+                                <rect key="frame" x="95" y="315" width="225" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickBackBTN:" destination="iPf-0X-CaU" eventType="touchUpInside" id="L6M-fX-6Ll"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="YXZ-TZ-Tqm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ucO-NK-Crn" firstAttribute="top" secondItem="YXZ-TZ-Tqm" secondAttribute="top" constant="90" id="7JV-hs-FeR"/>
                             <constraint firstItem="ucO-NK-Crn" firstAttribute="trailing" secondItem="YXZ-TZ-Tqm" secondAttribute="trailing" id="9uf-HK-QEm"/>
-                            <constraint firstItem="YXZ-TZ-Tqm" firstAttribute="trailing" secondItem="b1e-qc-PEL" secondAttribute="trailing" constant="20" id="EHj-Uc-iMy"/>
+                            <constraint firstItem="1Tp-jK-uNh" firstAttribute="top" secondItem="tdF-YF-zO7" secondAttribute="bottom" constant="30" id="Ije-tp-RGb"/>
                             <constraint firstItem="ucO-NK-Crn" firstAttribute="leading" secondItem="YXZ-TZ-Tqm" secondAttribute="leading" id="MGe-DU-Zmh"/>
-                            <constraint firstItem="b1e-qc-PEL" firstAttribute="leading" secondItem="YXZ-TZ-Tqm" secondAttribute="leading" constant="20" id="TrL-CU-tuy"/>
-                            <constraint firstItem="YXZ-TZ-Tqm" firstAttribute="bottom" secondItem="b1e-qc-PEL" secondAttribute="bottom" constant="65" id="yaZ-h0-yAL"/>
+                            <constraint firstItem="tdF-YF-zO7" firstAttribute="leading" secondItem="YXZ-TZ-Tqm" secondAttribute="leading" constant="95" id="S0L-kO-y0L"/>
+                            <constraint firstItem="tdF-YF-zO7" firstAttribute="top" secondItem="ucO-NK-Crn" secondAttribute="bottom" constant="81.5" id="Sm6-D8-Hgk"/>
+                            <constraint firstItem="YXZ-TZ-Tqm" firstAttribute="trailing" secondItem="1Tp-jK-uNh" secondAttribute="trailing" constant="94" id="UEU-ad-GkS"/>
+                            <constraint firstItem="YXZ-TZ-Tqm" firstAttribute="trailing" secondItem="tdF-YF-zO7" secondAttribute="trailing" constant="94" id="Zm7-AI-Yvy"/>
+                            <constraint firstItem="1Tp-jK-uNh" firstAttribute="leading" secondItem="YXZ-TZ-Tqm" secondAttribute="leading" constant="95" id="lHf-NS-zWT"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -95,42 +98,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v8p-BG-ZMT">
-                                <rect key="frame" x="20" y="492" width="374" height="313"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkv-DH-Lga">
-                                        <rect key="frame" x="120" y="204" width="134" height="40"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Join"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vp4-ZD-YRX">
-                                        <rect key="frame" x="120" y="252" width="134" height="40"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="back">
-                                            <color key="baseBackgroundColor" systemColor="opaqueSeparatorColor"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="Vkv-DH-Lga" firstAttribute="leading" secondItem="v8p-BG-ZMT" secondAttribute="leading" constant="120" id="A03-69-jmK"/>
-                                    <constraint firstAttribute="bottom" secondItem="vp4-ZD-YRX" secondAttribute="bottom" constant="10" id="MJp-w6-Ad2"/>
-                                    <constraint firstItem="vp4-ZD-YRX" firstAttribute="leading" secondItem="v8p-BG-ZMT" secondAttribute="leading" constant="120" id="N3r-gb-5Hi"/>
-                                    <constraint firstAttribute="trailing" secondItem="Vkv-DH-Lga" secondAttribute="trailing" constant="120" id="Oeu-bl-aTz"/>
-                                    <constraint firstItem="vp4-ZD-YRX" firstAttribute="top" secondItem="Vkv-DH-Lga" secondAttribute="bottom" constant="8" symbolic="YES" id="csm-ZP-Ldm"/>
-                                    <constraint firstAttribute="trailing" secondItem="vp4-ZD-YRX" secondAttribute="trailing" constant="120" id="vIE-ab-yv0"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QvW-C8-8aa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QvW-C8-8aa" firstAttribute="bottom" secondItem="v8p-BG-ZMT" secondAttribute="bottom" constant="60" id="1QO-PH-1am"/>
-                            <constraint firstItem="QvW-C8-8aa" firstAttribute="trailing" secondItem="v8p-BG-ZMT" secondAttribute="trailing" constant="20" id="6GQ-lH-JHi"/>
                             <constraint firstItem="fzG-1L-Pbu" firstAttribute="top" secondItem="QvW-C8-8aa" secondAttribute="top" constant="90" id="Pzx-X7-MrJ"/>
                             <constraint firstItem="fzG-1L-Pbu" firstAttribute="trailing" secondItem="QvW-C8-8aa" secondAttribute="trailing" id="eS9-0J-PnB"/>
                             <constraint firstItem="fzG-1L-Pbu" firstAttribute="leading" secondItem="QvW-C8-8aa" secondAttribute="leading" id="uz7-fX-f7E"/>
-                            <constraint firstItem="v8p-BG-ZMT" firstAttribute="leading" secondItem="QvW-C8-8aa" secondAttribute="leading" constant="20" id="xsT-oy-Tby"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -190,11 +164,14 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
