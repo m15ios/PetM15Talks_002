@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController: ViewController {
 
     @IBAction func clickJoinBTN(_ sender: Any) {
         print("111")
