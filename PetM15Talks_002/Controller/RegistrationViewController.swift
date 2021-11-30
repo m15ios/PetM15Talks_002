@@ -8,14 +8,18 @@
 import UIKit
 
 class RegistrationViewController: ViewController {
-
+    
+    var delegate: ViewControllerDelegate!
+    
     @IBAction func clickJoinBTN(_ sender: Any) {
         print("111")
     }
     
     @IBAction func clickBackBTN(_ sender: Any) {
-        print("222")
+        //print("222")
+        delegate.toScreen("BackToWelcome")
     }
+    
     
     
     

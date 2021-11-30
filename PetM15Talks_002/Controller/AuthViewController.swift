@@ -9,6 +9,8 @@ import UIKit
 
 class AuthViewController: ViewController {
 
+    var delegate: ViewControllerDelegate!
+    
     override func viewDidLoad() {
         print( "AuthViewController didload" )
         super.viewDidLoad()

@@ -16,11 +16,11 @@ class LoginSlideCollectionViewCell: UICollectionViewCell {
     var delegate: ViewControllerDelegate!
     
     @IBAction func slideLoginBTN(_ sender: Any) {
-        print("click slideLoginBTN")
+        //print("click slideLoginBTN")
         delegate.toScreen("AuthViewController")
     }
     @IBAction func slideJoinBTN(_ sender: Any) {
-        print("click slideJoinBTN")
+        //print("click slideJoinBTN")
         delegate.toScreen("RegistrationViewController")
     }
     

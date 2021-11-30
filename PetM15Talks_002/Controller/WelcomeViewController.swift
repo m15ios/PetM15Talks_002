@@ -14,7 +14,10 @@ class WelcomeViewController: ViewController {
     
     let nameSlideCellView: String = "LoginSlideCollectionViewCell"
     
-    
+    // for delegate extension
+    var authViewController: AuthViewController!
+    var registrationViewController: RegistrationViewController!
+
     
     override func viewDidLoad() {
         if let slides = getLoginSliderItems() {
@@ -78,5 +81,43 @@ extension WelcomeViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return self.view.frame.size
     }
+    
+}
+
+extension WelcomeViewController: ViewControllerDelegate{
+    
+    func toScreen( _ name: String ){
+        print("try to change screen view to \(name)")
+        switch( name ){
+            case "AuthViewController":
+                if authViewController == nil {
+                    authViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: name)// as! AuthViewController
+                    authViewController.delegate = self
+                    self.view.insertSubview( authViewController.view, at: 1)
+                }
+                break
+            case "RegistrationViewController":
+                if registrationViewController == nil {
+                    registrationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: name)// as! RegistrationViewController
+                    registrationViewController.delegate = self
+                    self.view.insertSubview( registrationViewController.view, at: 1)
+                }
+                break
+            case "BackToWelcome":
+                if authViewController != nil {
+                }
+                if registrationViewController != nil {
+                    registrationViewController.view.removeFromSuperview()
+                    registrationViewController = nil
+                }
+                break
+            default:
+                print( "toString switch error" )
+                break
+        }
+        //self.window?.rootViewController = currentStoryboardController
+        //self.window?.makeKeyAndVisible()
+    }
+
     
 }
