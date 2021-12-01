@@ -20,13 +20,25 @@ class RegistrationViewController: ViewController {
         delegate.toScreen("BackToWelcome")
     }
     
-    
+    /* tap to hide keys */
+    @IBOutlet weak var backRegView: UIView!
+    var tapMotion: UITapGestureRecognizer?
+    @objc func tapBackRegView(){
+        self.view.endEditing(true)
+    }
     
     
     override func viewDidLoad() {
-        print("reg controller")
+        print("show reg controller")
         super.viewDidLoad()
 
+        // init tap to backView
+        tapMotion = UITapGestureRecognizer(target: self, action: #selector(tapBackRegView) )
+        if tapMotion != nil {
+            backRegView.addGestureRecognizer( tapMotion! )
+        }
+        
+        
         // Do any additional setup after loading the view.
     }
     
