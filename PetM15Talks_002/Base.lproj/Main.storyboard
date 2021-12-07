@@ -36,7 +36,7 @@
                                 <rect key="frame" x="5" y="49" width="404" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="The-uF-okQ">
-                                        <rect key="frame" x="50" y="572" width="304" height="211"/>
+                                        <rect key="frame" x="50" y="358.5" width="304" height="211"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LaC-Hr-mnd">
                                                 <rect key="frame" x="0.0" y="0.0" width="304" height="118"/>
@@ -103,10 +103,10 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="The-uF-okQ" firstAttribute="centerY" secondItem="zdz-je-Yiv" secondAttribute="centerY" constant="60" id="8aj-o8-9zn"/>
                                     <constraint firstAttribute="trailing" secondItem="The-uF-okQ" secondAttribute="trailing" constant="50" id="L2T-Uh-tmN"/>
                                     <constraint firstItem="ucO-NK-Crn" firstAttribute="top" secondItem="zdz-je-Yiv" secondAttribute="top" constant="70" id="OVm-xv-xSC"/>
                                     <constraint firstItem="ucO-NK-Crn" firstAttribute="leading" secondItem="zdz-je-Yiv" secondAttribute="leading" constant="10" id="faH-QQ-0Fo"/>
-                                    <constraint firstAttribute="bottom" secondItem="The-uF-okQ" secondAttribute="bottom" constant="25" id="p6T-Ey-85H"/>
                                     <constraint firstAttribute="trailing" secondItem="ucO-NK-Crn" secondAttribute="trailing" constant="10" id="sbR-dv-4TX"/>
                                     <constraint firstItem="The-uF-okQ" firstAttribute="leading" secondItem="zdz-je-Yiv" secondAttribute="leading" constant="50" id="uJA-OV-Jpr"/>
                                 </constraints>
