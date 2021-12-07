@@ -12,7 +12,12 @@ class RegistrationViewController: ViewController {
     var delegate: ViewControllerDelegate!
     
     @IBAction func clickJoinBTN(_ sender: Any) {
-        print("111")
+        print("We try to join")
+        if checkFields() {
+            print("field validation is done")
+        } else {
+            print("field validation is fail")
+        }
     }
     
     @IBAction func clickBackBTN(_ sender: Any) {
@@ -25,6 +30,21 @@ class RegistrationViewController: ViewController {
     var tapMotion: UITapGestureRecognizer?
     @objc func tapBackRegView(){
         self.view.endEditing(true)
+    }
+    
+    @IBOutlet weak var loginField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var repasswordField: UITextField!
+    /* field validation */
+    var checkField: CheckField = CheckField.hole
+    private func checkFields() -> Bool {
+        var result: Bool = true
+        
+        if checkField.validField( loginField ) == false {
+            result = false
+        }
+        
+        return result
     }
     
     

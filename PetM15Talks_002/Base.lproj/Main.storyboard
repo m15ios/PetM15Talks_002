@@ -123,6 +123,9 @@
                     </view>
                     <connections>
                         <outlet property="backRegView" destination="zdz-je-Yiv" id="83G-Vt-5aG"/>
+                        <outlet property="loginField" destination="4Ge-Sk-yfT" id="ufm-tK-Bhq"/>
+                        <outlet property="passwordField" destination="hkq-lY-nFn" id="4re-N8-ZUd"/>
+                        <outlet property="repasswordField" destination="T3t-9t-jhu" id="uqU-e7-BDT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coF-Dx-AcR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
