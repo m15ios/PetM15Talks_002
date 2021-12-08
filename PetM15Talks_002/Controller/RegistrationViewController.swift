@@ -15,6 +15,7 @@ class RegistrationViewController: ViewController {
         print("We try to join")
         if checkFields() {
             print("field validation is done")
+            createMember()
         } else {
             print("field validation is fail")
         }
@@ -54,6 +55,28 @@ class RegistrationViewController: ViewController {
 
         return result
     }
+    
+    /* firebase storage */
+    var storage: Storage = Storage.hole
+    private func createMember(){
+        if  let email = loginField.text,
+            let password = passwordField.text {
+            
+            let data = MemberFormFields(email: email, password: password)
+            storage.addMember(data){ code in
+                switch code.code {
+                    case 200:
+                        print( "done 200" )
+                        break
+                    default:
+                        print( "error \(code))" )
+                        break
+                }
+            }
+        }
+    }
+    
+    
     
     
     override func viewDidLoad() {

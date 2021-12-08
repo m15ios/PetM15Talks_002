@@ -51,13 +51,13 @@
                                                         <rect key="frame" x="0.0" y="42" width="304" height="34"/>
                                                         <accessibility key="accessibilityConfiguration" hint="your password" label="password"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="repassField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T3t-9t-jhu">
                                                         <rect key="frame" x="0.0" y="84" width="304" height="34"/>
                                                         <accessibility key="accessibilityConfiguration" hint="repeate password" label="repeate password"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
