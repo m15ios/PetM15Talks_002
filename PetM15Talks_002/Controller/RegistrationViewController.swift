@@ -43,7 +43,15 @@ class RegistrationViewController: ViewController {
         if checkField.validField( loginField ) == false {
             result = false
         }
+
+        if checkField.validField( passwordField ) == false {
+            result = false
+        }
         
+        if checkField.validField( passwordField, repasswordField ) == false {
+            result = false
+        }
+
         return result
     }
     

@@ -26,10 +26,25 @@ class CheckField {
         return dataPred.evaluate(with: data)
     }
     
+    func validField( _ field1: UITextField,  _ field2: UITextField ) ->Bool {
+        if let text1 = field1.text, let text2 = field2.text {
+            if text1 == text2 {
+                print( "text1: \(text1) == text2: \(text2)" )
+                validView( field1, true)
+                validView( field2, true)
+                return true
+            }
+        }
+        validView( field1, false)
+        validView( field2, false)
+        return false
+    }
+    
     func validField( _ field: UITextField ) ->Bool {
         let id = field.restorationIdentifier
         
         switch id {
+            /*
             case "name":
                 if field.text?.count ?? 0 < 3 {
                     validView( field, false)
@@ -39,6 +54,7 @@ class CheckField {
                     return true
                 }
                 break
+             */
             case "loginField":
                 if isValid( "email", field.text! ){
                     validView( field, true)
