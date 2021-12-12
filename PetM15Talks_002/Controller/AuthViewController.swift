@@ -19,6 +19,13 @@ class AuthViewController: ViewController {
         //self.view.endEditing(true)
     }
     
+    /* if keys is hide ⇧+⌘+K or ⌘+K */
+    @IBAction func clickLoginFieldStart(_ sender: Any) {
+    //    print("show keyboard")
+    //    loginField.becomeFirstResponder()
+    }
+    
+    
    
     @IBAction func clickBackBTN(_ sender: Any) {
         //print("2222")
@@ -83,22 +90,23 @@ class AuthViewController: ViewController {
     
     
     /* listenner for get status show\hide keyboard */
+    /*
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     @objc func keyboardWillAppear() {
-        print("keyboard on")
+        //print("keyboard on")
     }
     @objc func keyboardWillDisappear() {
-        print("keyboard off")
+        //print("keyboard off")
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
     }
-    
+    */
     
     
 

@@ -154,6 +154,9 @@
                                                         <accessibility key="accessibilityConfiguration" hint="your e-mail" label="e-mail"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" textContentType="email"/>
+                                                        <connections>
+                                                            <action selector="clickLoginFieldStart:" destination="8tg-1H-3Bj" eventType="editingDidBegin" id="XOl-bd-2iS"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="passField" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jsS-g7-gsy">
                                                         <rect key="frame" x="0.0" y="42" width="304" height="34"/>
