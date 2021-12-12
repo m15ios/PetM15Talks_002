@@ -12,10 +12,11 @@ class AuthViewController: ViewController {
     var delegate: ViewControllerDelegate!
     
     /* tap to hide keys */
+    /* have to init in didload */
     @IBOutlet weak var backAuthView: UIView!
     var tapMotion: UITapGestureRecognizer?
-    @objc func tapBackRegView(){
-        self.view.endEditing(true)
+    @objc func tapBackAuthView(){
+        //self.view.endEditing(true)
     }
     
    
@@ -58,7 +59,15 @@ class AuthViewController: ViewController {
         print( "AuthViewController didload" )
         super.viewDidLoad()
 
+        // init tap to backView
+        tapMotion = UITapGestureRecognizer(target: self, action: #selector(tapBackAuthView) )
+        if tapMotion != nil {
+            backAuthView.addGestureRecognizer( tapMotion! )
+        }
+        
         // Do any additional setup after loading the view.
+        
+
     }
     
 
@@ -71,5 +80,26 @@ class AuthViewController: ViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
+    /* listenner for get status show\hide keyboard */
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillDisappear), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
+    }
+    @objc func keyboardWillAppear() {
+        print("keyboard on")
+    }
+    @objc func keyboardWillDisappear() {
+        print("keyboard off")
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    
+    
 
 }

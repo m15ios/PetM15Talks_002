@@ -27,10 +27,11 @@ class RegistrationViewController: ViewController {
     }
     
     /* tap to hide keys */
+    /* have to init in didload */
     @IBOutlet weak var backRegView: UIView!
     var tapMotion: UITapGestureRecognizer?
     @objc func tapBackRegView(){
-        self.view.endEditing(true)
+        //self.view.endEditing(true)
     }
     
     @IBOutlet weak var loginField: UITextField!
