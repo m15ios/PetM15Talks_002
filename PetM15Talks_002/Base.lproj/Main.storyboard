@@ -175,6 +175,9 @@
                                                             </backgroundConfiguration>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="clickAuthBTN:" destination="8tg-1H-3Bj" eventType="touchUpInside" id="vxV-7h-Dqt"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Myh-cR-W8E">
                                                         <rect key="frame" x="0.0" y="47" width="304" height="31"/>
@@ -185,6 +188,9 @@
                                                             </backgroundConfiguration>
                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="clickBackBTN:" destination="8tg-1H-3Bj" eventType="touchUpInside" id="Gjx-3Z-X9p"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -217,6 +223,11 @@
                             <constraint firstItem="tez-uJ-xUv" firstAttribute="top" secondItem="QvW-C8-8aa" secondAttribute="top" id="uL8-9c-RFC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backAuthView" destination="tez-uJ-xUv" id="yMC-XN-ubv"/>
+                        <outlet property="loginField" destination="zOA-xm-Ggq" id="Lvr-DL-W1n"/>
+                        <outlet property="passwordField" destination="jsS-g7-gsy" id="N9S-X7-enT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2gE-8n-g2M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

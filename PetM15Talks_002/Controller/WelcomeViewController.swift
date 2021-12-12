@@ -105,6 +105,8 @@ extension WelcomeViewController: ViewControllerDelegate{
                 break
             case "BackToWelcome":
                 if authViewController != nil {
+                    authViewController.view.removeFromSuperview()
+                    authViewController = nil
                 }
                 if registrationViewController != nil {
                     registrationViewController.view.removeFromSuperview()

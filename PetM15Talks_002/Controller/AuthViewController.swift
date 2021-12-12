@@ -11,6 +11,49 @@ class AuthViewController: ViewController {
 
     var delegate: ViewControllerDelegate!
     
+    /* tap to hide keys */
+    @IBOutlet weak var backAuthView: UIView!
+    var tapMotion: UITapGestureRecognizer?
+    @objc func tapBackRegView(){
+        self.view.endEditing(true)
+    }
+    
+   
+    @IBAction func clickBackBTN(_ sender: Any) {
+        //print("2222")
+        delegate.toScreen("BackToWelcome")
+    }
+    
+    @IBAction func clickAuthBTN(_ sender: Any) {
+        print("We try to login")
+        if checkFields() {
+            print("field validation is done")
+        } else {
+            print("field validation is fail")
+        }
+    }
+    
+    
+    @IBOutlet weak var loginField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    /* field validation */
+    var checkField: CheckField = CheckField.hole
+    private func checkFields() -> Bool {
+        var result: Bool = true
+        
+        if checkField.validField( loginField ) == false {
+            result = false
+        }
+
+        if checkField.validField( passwordField ) == false {
+            result = false
+        }
+
+        return result
+    }
+    
+    
+    
     override func viewDidLoad() {
         print( "AuthViewController didload" )
         super.viewDidLoad()
