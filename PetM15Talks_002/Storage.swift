@@ -24,6 +24,9 @@ class Storage {
     static let hole = Storage()
     init() {}
     
+    func auth() -> Auth {
+        return Auth.auth()
+    }
     
     func addMember( _ data: MemberFormFields, completion: @escaping (ResponseCode)->() ){
         // [weak self] - unload from memory if connect lost
@@ -45,6 +48,14 @@ class Storage {
         }
     }
     
+    func emailVerification() {
+        Auth.auth().currentUser?.sendEmailVerification(completion: { error in
+            if error != nil {
+                print( "Email verification terminated" )
+                print( error!.localizedDescription )
+            }
+        })
+    }
     
     
 }

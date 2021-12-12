@@ -63,10 +63,12 @@ class RegistrationViewController: ViewController {
             let password = passwordField.text {
             
             let data = MemberFormFields(email: email, password: password)
-            storage.addMember(data){ code in
+            storage.addMember(data){ [weak self] code in
                 switch code.code {
                     case 200:
                         print( "done 200" )
+                        //if need verification
+                        //self?.storage.emailVerification()
                         break
                     default:
                         print( "error \(code))" )
