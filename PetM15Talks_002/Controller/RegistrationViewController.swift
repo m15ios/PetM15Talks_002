@@ -44,6 +44,9 @@ class RegistrationViewController: ViewController {
         
         if checkField.validField( loginField ) == false {
             result = false
+            showAlert("It doesn't look like email"){
+                // nothing
+            }
         }
 
         if checkField.validField( passwordField ) == false {
@@ -53,8 +56,19 @@ class RegistrationViewController: ViewController {
         if checkField.validField( passwordField, repasswordField ) == false {
             result = false
         }
-
         return result
+    }
+    
+    // show alert with completion (closure)
+    private func showAlert(_ message: String, _ completion: () -> Void ) -> Void {
+        let alert = UIAlertController(title: message, message: "", preferredStyle: .alert)
+        let btn = UIAlertAction( title: "OK", style: .default ){ message in
+            print( "Button OK is pushed" )
+            // don't work!!!
+            print( message )
+        }
+        alert.addAction(btn)
+        present(alert, animated: true)
     }
     
     /* firebase storage */
@@ -70,6 +84,11 @@ class RegistrationViewController: ViewController {
                         print( "done 200" )
                         //if need verification
                         //self?.storage.emailVerification()
+                        self?.showAlert("New member added", {
+                            // close this view and return to main
+                            self?.delegate.toScreen("BackToWelcome")
+                            print("to close view")
+                        })
                         break
                     default:
                         print( "error \(code))" )
@@ -92,6 +111,7 @@ class RegistrationViewController: ViewController {
             backRegView.addGestureRecognizer( tapMotion! )
         }
         
+      
         
         // Do any additional setup after loading the view.
     }
