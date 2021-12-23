@@ -8,6 +8,7 @@ target 'PetM15Talks_002' do
   # Pods for PetM15Talks_002
   pod 'Firebase/Auth'
   pod 'Firebase/Analytics'
+  pod 'Firebase/Firestore'
 
 
 end

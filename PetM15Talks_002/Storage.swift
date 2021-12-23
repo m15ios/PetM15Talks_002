@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseFirestore
 
 struct MemberFormFields {
     var email: String
@@ -34,6 +35,13 @@ class Storage {
             if err == nil {
                 if result != nil {
                     if let memberId = result?.user.uid {
+                        
+                        // save userCard to firebase
+                        //let email = data.email  as String
+                        //let documentData:[String: String] = ["userEmail":email]
+                        let documentId = memberId as String
+                        self?.saveUserDocument(userId: documentId, userData: ["userEmail":data.email] )
+                        
                         print("fb uid: \(memberId)")
                         completion(ResponseCode(code: 200))
                     }
@@ -55,6 +63,10 @@ class Storage {
                 print( error!.localizedDescription )
             }
         })
+    }
+    
+    func saveUserDocument( userId: String, userData: [String: String] ){
+        Firestore.firestore().collection("Users").document(userId).setData(userData, merge: true)
     }
     
     

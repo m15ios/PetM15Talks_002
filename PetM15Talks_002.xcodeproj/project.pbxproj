@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8CC91463354D90D67725A400 /* Pods_PetM15Talks_002.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C48EE5E8D5637FF7C472B9 /* Pods_PetM15Talks_002.framework */; };
+		9464B3502775012000218D8A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9464B34F2775012000218D8A /* README.md */; };
 		94879BFD27613D1B00C0E957 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94879BFC27613D1B00C0E957 /* Storage.swift */; };
 		94AF5882273C413A003DCE39 /* LoginSliderItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF5881273C413A003DCE39 /* LoginSliderItems.swift */; };
 		94B36AC52738468400C77E20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B36AC42738468400C77E20 /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		87D371698CA5A309C00693BD /* Pods-PetM15Talks_002.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetM15Talks_002.debug.xcconfig"; path = "Target Support Files/Pods-PetM15Talks_002/Pods-PetM15Talks_002.debug.xcconfig"; sourceTree = "<group>"; };
+		9464B34F2775012000218D8A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		94879BFC27613D1B00C0E957 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		94AF5881273C413A003DCE39 /* LoginSliderItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSliderItems.swift; sourceTree = "<group>"; };
 		94B36AC12738468400C77E20 /* PetM15Talks_002.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetM15Talks_002.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +78,7 @@
 		94B36AB82738468400C77E20 = {
 			isa = PBXGroup;
 			children = (
+				9464B34F2775012000218D8A /* README.md */,
 				94B36AC32738468400C77E20 /* PetM15Talks_002 */,
 				94B36AC22738468400C77E20 /* Products */,
 				7800F44A79720981DB68E04A /* Pods */,
@@ -208,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9464B3502775012000218D8A /* README.md in Resources */,
 				94B36AD12738468400C77E20 /* LaunchScreen.storyboard in Resources */,
 				94B36AD9273848BB00C77E20 /* GoogleService-Info.plist in Resources */,
 				94B36ACE2738468400C77E20 /* Assets.xcassets in Resources */,
