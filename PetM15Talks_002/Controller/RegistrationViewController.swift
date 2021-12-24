@@ -44,9 +44,10 @@ class RegistrationViewController: ViewController {
         
         if checkField.validField( loginField ) == false {
             result = false
-            showAlert("It doesn't look like email"){
+            showAlert("It doesn't look like email", {
                 // nothing
-            }
+                print("ook")
+            })
         }
 
         if checkField.validField( passwordField ) == false {
@@ -62,10 +63,14 @@ class RegistrationViewController: ViewController {
     // show alert with completion (closure)
     private func showAlert(_ message: String, _ completion: () -> Void ) -> Void {
         let alert = UIAlertController(title: message, message: "", preferredStyle: .alert)
-        let btn = UIAlertAction( title: "OK", style: .default ){ message in
+        let completion2:() -> Void = {
+            print("fff")
+            //print( completion )
+        }
+        let btn = UIAlertAction( title: "OK", style: .default ){_ in
             print( "Button OK is pushed" )
             // don't work!!!
-            print( message )
+            completion2()
         }
         alert.addAction(btn)
         present(alert, animated: true)
@@ -84,11 +89,11 @@ class RegistrationViewController: ViewController {
                         print( "done 200" )
                         //if need verification
                         //self?.storage.emailVerification()
-                        self?.showAlert("New member added", {
+                        //self?.showAlert("New member added", {
                             // close this view and return to main
-                            self?.delegate.toScreen("BackToWelcome")
-                            print("to close view")
-                        })
+                            //self?.delegate.toScreen("BackToWelcome")
+                        //    print("to close view")
+                        //})
                         break
                     default:
                         print( "error \(code))" )
