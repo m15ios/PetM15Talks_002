@@ -31,7 +31,7 @@ class RegistrationViewController: ViewController {
     @IBOutlet weak var backRegView: UIView!
     var tapMotion: UITapGestureRecognizer?
     @objc func tapBackRegView(){
-        //self.view.endEditing(true)
+        self.view.endEditing(true)
     }
     
     @IBOutlet weak var loginField: UITextField!
@@ -44,10 +44,7 @@ class RegistrationViewController: ViewController {
         
         if checkField.validField( loginField ) == false {
             result = false
-            showAlert("It doesn't look like email", {
-                // nothing
-                print("ook")
-            })
+            showAlert("It doesn't look like email", "Close" )
         }
 
         if checkField.validField( passwordField ) == false {
@@ -61,16 +58,15 @@ class RegistrationViewController: ViewController {
     }
     
     // show alert with completion (closure)
-    private func showAlert(_ message: String, _ completion: () -> Void ) -> Void {
+    private func showAlert(_ message: String,_ actionCode: String? = nil ) -> Void {
         let alert = UIAlertController(title: message, message: "", preferredStyle: .alert)
-        let completion2:() -> Void = {
-            print("fff")
-            //print( completion )
-        }
-        let btn = UIAlertAction( title: "OK", style: .default ){_ in
+        let btn = UIAlertAction( title: "OK", style: .default ){ _ in
             print( "Button OK is pushed" )
-            // don't work!!!
-            completion2()
+            if actionCode != nil {
+                if actionCode! == "Close" {
+                    self.delegate.toScreen("BackToWelcome")
+                }
+            }
         }
         alert.addAction(btn)
         present(alert, animated: true)
@@ -89,7 +85,7 @@ class RegistrationViewController: ViewController {
                         print( "done 200" )
                         //if need verification
                         //self?.storage.emailVerification()
-                        //self?.showAlert("New member added", {
+                        self?.showAlert("New member added", "close" )
                             // close this view and return to main
                             //self?.delegate.toScreen("BackToWelcome")
                         //    print("to close view")
@@ -133,3 +129,4 @@ class RegistrationViewController: ViewController {
     */
 
 }
+
