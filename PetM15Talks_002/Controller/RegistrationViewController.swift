@@ -85,11 +85,8 @@ class RegistrationViewController: ViewController {
                         print( "done 200" )
                         //if need verification
                         //self?.storage.emailVerification()
-                        self?.showAlert("New member added", "close" )
-                            // close this view and return to main
-                            //self?.delegate.toScreen("BackToWelcome")
-                        //    print("to close view")
-                        //})
+                        // close this view and return to main
+                        self?.showAlert("New member added", "Close" )
                         break
                     default:
                         print( "error \(code))" )

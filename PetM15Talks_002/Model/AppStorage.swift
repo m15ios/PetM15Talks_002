@@ -12,6 +12,7 @@ class AppStorage {
     var appStates = UserDefaults.standard
 
     //how use: AppStorage.hole().getUserAuth()
+    // as isLogin isAuth
     func getUserAuth() -> Bool {
 
         let userAuth = appStates.object(forKey: "userAuth") as? Bool ?? false

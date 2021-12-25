@@ -50,7 +50,7 @@ class Storage {
                 let responseError = err! as NSError
                 print( responseError.code )
                 
-                print("oops")
+                print("oops reg member")
                 completion(ResponseCode(code: 404))
             }
         }
@@ -69,5 +69,24 @@ class Storage {
         Firestore.firestore().collection("Users").document(userId).setData(userData, merge: true)
     }
     
+    
+    func loginMember( _ data: MemberFormFields, completion: @escaping (ResponseCode)->() ){
+        // [weak self] - unload from memory if connect lost
+        Auth.auth().signIn(withEmail: data.email, password: data.password){ [weak self] result, err in
+            if err == nil {
+                if result != nil {
+                    if let memberId = result?.user.uid {
+                        print("fb uid: \(memberId)")
+                        completion(ResponseCode(code: 200))
+                    }
+                }
+            } else {
+                let responseError = err! as NSError
+                print( responseError.code )
+                print("oops sign in")
+                completion(ResponseCode(code: 404))
+            }
+        }
+    }
     
 }

@@ -36,6 +36,7 @@ class AuthViewController: ViewController {
         print("We try to login")
         if checkFields() {
             print("field validation is done")
+            loginMember()
         } else {
             print("field validation is fail")
         }
@@ -61,6 +62,20 @@ class AuthViewController: ViewController {
     }
     
     
+    private func showAlert(_ message: String,_ actionCode: String? = nil ) -> Void {
+        let alert = UIAlertController(title: message, message: "", preferredStyle: .alert)
+        let btn = UIAlertAction( title: "OK", style: .default ){ _ in
+            print( "Button OK is pushed" )
+            if actionCode != nil {
+                if actionCode! == "Close" {
+                    self.delegate.toScreen("BackToWelcome")
+                }
+            }
+        }
+        alert.addAction(btn)
+        present(alert, animated: true)
+    }
+    
     
     override func viewDidLoad() {
         print( "AuthViewController didload" )
@@ -76,6 +91,29 @@ class AuthViewController: ViewController {
         
 
     }
+    
+    
+    /* firebase storage */
+    var storage: Storage = Storage.hole
+    private func loginMember(){
+        if  let email = loginField.text,
+            let password = passwordField.text {
+            
+            let data = MemberFormFields(email: email, password: password)
+            storage.loginMember(data){ [weak self] code in
+                switch code.code {
+                    case 200:
+                        print( "done 200" )
+                        self?.showAlert("Login successful", "Close" )
+                        break
+                    default:
+                        print( "error \(code))" )
+                        break
+                }
+            }
+        }
+    }
+    
     
 
     /*
