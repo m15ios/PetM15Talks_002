@@ -17,6 +17,7 @@ struct MemberFormFields {
 
 struct ResponseCode {
     var code: Int
+    var memberId: String
 }
 
 
@@ -43,7 +44,10 @@ class Storage {
                         self?.saveUserDocument(userId: documentId, userData: ["userEmail":data.email] )
                         
                         print("fb uid: \(memberId)")
-                        completion(ResponseCode(code: 200))
+                        var response = ResponseCode(code: 200, memberId: documentId)
+                        print(response)
+                        print("----")
+                        completion(ResponseCode(code: 200, memberId: documentId))
                     }
                 }
             } else {
@@ -51,7 +55,7 @@ class Storage {
                 print( responseError.code )
                 
                 print("oops reg member")
-                completion(ResponseCode(code: 404))
+                completion(ResponseCode(code: 404, memberId: ""))
             }
         }
     }
@@ -77,14 +81,14 @@ class Storage {
                 if result != nil {
                     if let memberId = result?.user.uid {
                         print("fb uid: \(memberId)")
-                        completion(ResponseCode(code: 200))
+                        completion(ResponseCode(code: 200, memberId: memberId as String))
                     }
                 }
             } else {
                 let responseError = err! as NSError
                 print( responseError.code )
                 print("oops sign in")
-                completion(ResponseCode(code: 404))
+                completion(ResponseCode(code: 404, memberId: ""))
             }
         }
     }

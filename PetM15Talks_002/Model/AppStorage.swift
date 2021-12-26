@@ -14,9 +14,7 @@ class AppStorage {
     //how use: AppStorage.hole().getUserAuth()
     // as isLogin isAuth
     func getUserAuth() -> Bool {
-
         let userAuth = appStates.object(forKey: "userAuth") as? Bool ?? false
-    
         return userAuth
     }
     
@@ -24,7 +22,11 @@ class AppStorage {
     func setUserAuth( _ newValue: Bool ){
         appStates.setValue( newValue, forKey: "userAuth" )
     }
-    
+
+    func setUserID( _ newValue: String ){
+        appStates.setValue( newValue, forKey: "userID" )
+    }
+
     static var appStorage: AppStorage?
    
     static func hole() -> AppStorage {

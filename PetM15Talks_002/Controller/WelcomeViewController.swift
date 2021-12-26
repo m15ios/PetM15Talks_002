@@ -17,6 +17,7 @@ class WelcomeViewController: ViewController {
     // for delegate extension
     var authViewController: AuthViewController!
     var registrationViewController: RegistrationViewController!
+    var mainViewController: MainViewController!
 
     
     override func viewDidLoad() {
@@ -101,6 +102,21 @@ extension WelcomeViewController: ViewControllerDelegate{
                     registrationViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: name)// as! RegistrationViewController
                     registrationViewController.delegate = self
                     self.view.insertSubview( registrationViewController.view, at: 1)
+                }
+                break
+            case "MainViewController":
+                if authViewController != nil {
+                    authViewController.view.removeFromSuperview()
+                    authViewController = nil
+                }
+                if registrationViewController != nil {
+                    registrationViewController.view.removeFromSuperview()
+                    registrationViewController = nil
+                }
+                if mainViewController == nil {
+                    mainViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: name)// as! MainViewController
+                    //mainViewController.delegate = self
+                    self.view.insertSubview( mainViewController.view, at: 1)
                 }
                 break
             case "BackToWelcome":

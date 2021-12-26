@@ -70,6 +70,9 @@ class AuthViewController: ViewController {
                 if actionCode! == "Close" {
                     self.delegate.toScreen("BackToWelcome")
                 }
+                if actionCode! == "Main" {
+                    self.delegate.toScreen("MainViewController")
+                }
             }
         }
         alert.addAction(btn)
@@ -100,14 +103,21 @@ class AuthViewController: ViewController {
             let password = passwordField.text {
             
             let data = MemberFormFields(email: email, password: password)
-            storage.loginMember(data){ [weak self] code in
-                switch code.code {
+            storage.loginMember(data){ [weak self] responce in
+                switch responce.code {
                     case 200:
                         print( "done 200" )
-                        self?.showAlert("Login successful", "Close" )
+                        //print( responce )
+                        if responce.memberId != "" {
+                            AppStorage.hole().setUserID( responce.memberId )
+                            AppStorage.hole().setUserAuth( true )
+                            self?.showAlert("Login successful", "Main" )
+                        } else {
+                            self?.showAlert("Something did wrong! Try again?", "Error" )
+                        }
                         break
                     default:
-                        print( "error \(code))" )
+                        print( "error \(responce))" )
                         break
                 }
             }

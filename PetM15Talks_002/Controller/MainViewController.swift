@@ -15,6 +15,7 @@ class MainViewController: UITabBarController {
         // Do any additional setup after loading the view.
     }
     
+    //var delegate: ViewControllerDelegate!
 
     /*
     // MARK: - Navigation
@@ -27,3 +28,12 @@ class MainViewController: UITabBarController {
     */
 
 }
+
+/*
+extension MainViewController: ViewControllerDelegate{
+    
+    func toScreen( _ name: String ){
+        print("try to change screen view to \(name)")
+    }
+}
+*/
