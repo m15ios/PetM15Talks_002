@@ -236,7 +236,7 @@
             </objects>
             <point key="canvasLocation" x="1871" y="65"/>
         </scene>
-        <!--Item 2-->
+        <!--Stream-->
         <scene sceneID="w83-NJ-mZH">
             <objects>
                 <viewController id="guh-4h-r48" sceneMemberID="viewController">
@@ -246,13 +246,49 @@
                         <viewLayoutGuide key="safeArea" id="C8U-nn-hHR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="f9Z-sT-DK2"/>
+                    <tabBarItem key="tabBarItem" title="Stream" id="f9Z-sT-DK2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABf-lg-EKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3816" y="410"/>
+            <point key="canvasLocation" x="4612" y="-331"/>
         </scene>
-        <!--Item 1-->
+        <!--My Profile-->
+        <scene sceneID="Q5A-Fq-sY0">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="gxD-Ti-nFZ" customClass="ProfileViewController" customModule="PetM15Talks_002" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mw7-9w-5A4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCP-1J-INM">
+                                <rect key="frame" x="50" y="732" width="314" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                    </backgroundConfiguration>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="LogoutBTN:" destination="gxD-Ti-nFZ" eventType="touchUpInside" id="peS-he-PVQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="INr-dK-P3L"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="INr-dK-P3L" firstAttribute="bottom" secondItem="lCP-1J-INM" secondAttribute="bottom" constant="50" id="H60-PR-fF3"/>
+                            <constraint firstItem="lCP-1J-INM" firstAttribute="leading" secondItem="INr-dK-P3L" secondAttribute="leading" constant="50" id="IbZ-AS-RXC"/>
+                            <constraint firstItem="INr-dK-P3L" firstAttribute="trailing" secondItem="lCP-1J-INM" secondAttribute="trailing" constant="50" id="chD-Ii-Mvk"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Profile" id="Mm8-mV-m0X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lKE-Jb-QZK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5431.884057971015" y="-331.47321428571428"/>
+        </scene>
+        <!--Members-->
         <scene sceneID="GOf-RV-Tl0">
             <objects>
                 <viewController id="eFq-ko-cf5" sceneMemberID="viewController">
@@ -262,11 +298,11 @@
                         <viewLayoutGuide key="safeArea" id="esM-of-IYG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Noo-Wz-vmK"/>
+                    <tabBarItem key="tabBarItem" title="Members" id="Noo-Wz-vmK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m9s-Xe-toe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3816" y="-299"/>
+            <point key="canvasLocation" x="3816" y="-331"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="SOz-5f-VI7">
@@ -280,6 +316,7 @@
                     <connections>
                         <segue destination="eFq-ko-cf5" kind="relationship" relationship="viewControllers" id="riC-fZ-cFH"/>
                         <segue destination="guh-4h-r48" kind="relationship" relationship="viewControllers" id="y7m-FN-bLD"/>
+                        <segue destination="gxD-Ti-nFZ" kind="relationship" relationship="viewControllers" id="wiR-Ld-5RS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rAy-dG-hSB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -293,6 +330,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
