@@ -30,7 +30,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let currentStoryboardController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: idController)
         self.window?.rootViewController = currentStoryboardController
         self.window?.makeKeyAndVisible()
-
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -63,4 +62,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
-
