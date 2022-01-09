@@ -23,8 +23,9 @@ class ProfileViewController: ViewController {
         let btn = UIAlertAction( title: "OK", style: .default ){ _ in
             print( "Button OK is pushed" )
             if actionCode != nil {
-                if actionCode! == "Close" {
+                if actionCode! == "Exit" {
                     //self.delegate.toScreen("BackToWelcome")
+                    exit(0);
                 }
             }
         }
@@ -36,7 +37,7 @@ class ProfileViewController: ViewController {
         print("logOut pushed")
         AppStorage.hole().setUserID( "" )
         AppStorage.hole().setUserAuth( false )
-        showAlert("Logout successful", "Nothing" )
+        showAlert("Logout successful", "Exit" )
     }
     
 
