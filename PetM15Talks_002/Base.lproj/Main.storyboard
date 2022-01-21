@@ -246,7 +246,7 @@
                         <viewLayoutGuide key="safeArea" id="C8U-nn-hHR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Stream" id="f9Z-sT-DK2"/>
+                    <tabBarItem key="tabBarItem" title="Stream" image="message" catalog="system" selectedImage="message.fill" id="f9Z-sT-DK2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABf-lg-EKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -282,7 +282,7 @@
                             <constraint firstItem="INr-dK-P3L" firstAttribute="trailing" secondItem="lCP-1J-INM" secondAttribute="trailing" constant="50" id="chD-Ii-Mvk"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="My Profile" id="Mm8-mV-m0X"/>
+                    <tabBarItem key="tabBarItem" title="My Profile" image="gearshape" catalog="system" selectedImage="gearshape.fill" id="Mm8-mV-m0X"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKE-Jb-QZK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -298,7 +298,7 @@
                         <viewLayoutGuide key="safeArea" id="esM-of-IYG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Members" id="Noo-Wz-vmK"/>
+                    <tabBarItem key="tabBarItem" title="Members" image="person.3" catalog="system" selectedImage="person.3.fill" id="Noo-Wz-vmK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m9s-Xe-toe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -325,6 +325,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
+        <image name="message" catalog="system" width="128" height="113"/>
+        <image name="message.fill" catalog="system" width="128" height="113"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
+        <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
