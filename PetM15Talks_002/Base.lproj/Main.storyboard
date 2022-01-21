@@ -236,17 +236,17 @@
             </objects>
             <point key="canvasLocation" x="1871" y="65"/>
         </scene>
-        <!--Stream-->
+        <!--Streams-->
         <scene sceneID="w83-NJ-mZH">
             <objects>
-                <viewController id="guh-4h-r48" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StreamsViewController" id="guh-4h-r48" customClass="StreamsViewController" customModule="PetM15Talks_002" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ita-Pk-KEe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="C8U-nn-hHR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Stream" image="message" catalog="system" selectedImage="message.fill" id="f9Z-sT-DK2"/>
+                    <tabBarItem key="tabBarItem" title="Streams" image="message" catalog="system" selectedImage="message.fill" id="f9Z-sT-DK2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABf-lg-EKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -291,14 +291,29 @@
         <!--Members-->
         <scene sceneID="GOf-RV-Tl0">
             <objects>
-                <viewController id="eFq-ko-cf5" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MembersViewController" id="eFq-ko-cf5" customClass="MembersViewController" customModule="PetM15Talks_002" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B61-6O-e7S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="PHq-rl-wgr">
+                                <rect key="frame" x="5" y="49" width="404" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="esM-of-IYG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PHq-rl-wgr" firstAttribute="leading" secondItem="esM-of-IYG" secondAttribute="leading" constant="5" id="Zh8-a8-djX"/>
+                            <constraint firstItem="PHq-rl-wgr" firstAttribute="top" secondItem="esM-of-IYG" secondAttribute="top" constant="5" id="etJ-19-iEy"/>
+                            <constraint firstItem="esM-of-IYG" firstAttribute="trailing" secondItem="PHq-rl-wgr" secondAttribute="trailing" constant="5" id="sAO-08-e6N"/>
+                            <constraint firstItem="esM-of-IYG" firstAttribute="bottom" secondItem="PHq-rl-wgr" secondAttribute="bottom" constant="5" id="xwb-92-TFv"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Members" image="person.3" catalog="system" selectedImage="person.3.fill" id="Noo-Wz-vmK"/>
+                    <connections>
+                        <outlet property="membersTable" destination="PHq-rl-wgr" id="L11-20-Qsk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m9s-Xe-toe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
