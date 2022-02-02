@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8CC91463354D90D67725A400 /* Pods_PetM15Talks_002.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C48EE5E8D5637FF7C472B9 /* Pods_PetM15Talks_002.framework */; };
 		943C270B2780DF46006F3692 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943C270A2780DF46006F3692 /* ProfileViewController.swift */; };
+		944DC25927AB17AC00C45A25 /* Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944DC25827AB17AC00C45A25 /* Members.swift */; };
 		9461C404279B449600058CCB /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461C403279B449600058CCB /* MembersViewController.swift */; };
 		9461C406279B463900058CCB /* StreamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461C405279B463900058CCB /* StreamsViewController.swift */; };
 		9461C409279B47B200058CCB /* MembersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461C407279B47B200058CCB /* MembersTableViewCell.swift */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		87D371698CA5A309C00693BD /* Pods-PetM15Talks_002.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PetM15Talks_002.debug.xcconfig"; path = "Target Support Files/Pods-PetM15Talks_002/Pods-PetM15Talks_002.debug.xcconfig"; sourceTree = "<group>"; };
 		943C270A2780DF46006F3692 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		944DC25827AB17AC00C45A25 /* Members.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Members.swift; sourceTree = "<group>"; };
 		9461C403279B449600058CCB /* MembersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersViewController.swift; sourceTree = "<group>"; };
 		9461C405279B463900058CCB /* StreamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamsViewController.swift; sourceTree = "<group>"; };
 		9461C407279B47B200058CCB /* MembersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersTableViewCell.swift; sourceTree = "<group>"; };
@@ -118,7 +120,6 @@
 				94B36ACF2738468400C77E20 /* LaunchScreen.storyboard */,
 				94B36AD8273848BB00C77E20 /* GoogleService-Info.plist */,
 				94B36AD22738468400C77E20 /* Info.plist */,
-				94879BFC27613D1B00C0E957 /* Storage.swift */,
 			);
 			path = PetM15Talks_002;
 			sourceTree = "<group>";
@@ -143,6 +144,8 @@
 				94AF5881273C413A003DCE39 /* LoginSliderItems.swift */,
 				94C66D36273EC50B00A4FA85 /* AppStorage.swift */,
 				94C18822275FF4C700A4D251 /* CheckField.swift */,
+				94879BFC27613D1B00C0E957 /* Storage.swift */,
+				944DC25827AB17AC00C45A25 /* Members.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				94B36AC92738468400C77E20 /* ViewController.swift in Sources */,
 				9461C409279B47B200058CCB /* MembersTableViewCell.swift in Sources */,
 				94CA6E7F273DA68F006FC8DD /* RegistrationViewController.swift in Sources */,
+				944DC25927AB17AC00C45A25 /* Members.swift in Sources */,
 				94BB22C42739AB3A00A7B751 /* LoginSlideCollectionViewCell.swift in Sources */,
 				94879BFD27613D1B00C0E957 /* Storage.swift in Sources */,
 				94CA6E7D273DA62C006FC8DD /* AuthViewController.swift in Sources */,
