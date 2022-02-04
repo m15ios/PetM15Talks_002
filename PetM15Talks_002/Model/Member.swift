@@ -10,6 +10,20 @@ import Firebase
 import FirebaseAuth
 import FirebaseFirestore
 
+struct MemberFields {
+    var userEmail: String
+    
+    func _toDictionary() -> [String:Any]{
+        var res = [String:Any]()
+        let mirror = Mirror(reflecting: self)
+        let properties = Array(mirror.children)
+        for i in properties {
+            res[ i.label! ] = i.value
+        }
+        return res
+    }
+}
+
 struct MemberFormFields {
     var email: String
     var password: String
@@ -19,7 +33,6 @@ struct ResponseCode {
     var code: Int
     var memberId: String
 }
-
 
 class Member {
     
@@ -41,7 +54,10 @@ class Member {
                         //let email = data.email  as String
                         //let documentData:[String: String] = ["userEmail":email]
                         let documentId = memberId as String
-                        self?.saveUserDocument(userId: documentId, userData: ["userEmail":data.email] )
+                        
+                        //self?.saveUserDocument(userId: documentId, userData: ["userEmail":data.email] )
+                        var memberCard = MemberFields(userEmail:data.email)._toDictionary()
+                        self?.saveUserDocument(userId: documentId, userData: memberCard )
                         
                         print("fb uid: \(memberId)")
                         var response = ResponseCode(code: 200, memberId: documentId)
@@ -69,7 +85,7 @@ class Member {
         })
     }
     
-    func saveUserDocument( userId: String, userData: [String: String] ){
+    func saveUserDocument( userId: String, userData: [String: Any] ){
         Firestore.firestore().collection("Users").document(userId).setData(userData, merge: true)
     }
     
