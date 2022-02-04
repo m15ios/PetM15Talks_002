@@ -73,13 +73,14 @@ class RegistrationViewController: ViewController {
     }
     
     /* firebase storage */
-    var storage: Storage = Storage.hole
+    var member: Member = Member.hole
+    
     private func createMember(){
         if  let email = loginField.text,
             let password = passwordField.text {
             
             let data = MemberFormFields(email: email, password: password)
-            storage.addMember(data){ [weak self] code in
+            member.addMember(data){ [weak self] code in
                 switch code.code {
                     case 200:
                         print( "done 200" )

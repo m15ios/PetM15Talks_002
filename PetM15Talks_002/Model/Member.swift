@@ -1,5 +1,5 @@
 //
-//  Storage.swift
+//  Member.swift
 //  PetM15Talks_002
 //
 //  Created by Mikhail Petrenko on 08.12.2021.
@@ -21,9 +21,9 @@ struct ResponseCode {
 }
 
 
-class Storage {
+class Member {
     
-    static let hole = Storage()
+    static let hole = Member()
     init() {}
     
     func auth() -> Auth {

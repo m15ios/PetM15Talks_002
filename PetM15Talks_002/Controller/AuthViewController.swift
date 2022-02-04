@@ -97,13 +97,14 @@ class AuthViewController: ViewController {
     
     
     /* firebase storage */
-    var storage: Storage = Storage.hole
+    var member: Member = Member.hole
+    
     private func loginMember(){
         if  let email = loginField.text,
             let password = passwordField.text {
             
             let data = MemberFormFields(email: email, password: password)
-            storage.loginMember(data){ [weak self] responce in
+            member.loginMember(data){ [weak self] responce in
                 switch responce.code {
                     case 200:
                         print( "done 200" )

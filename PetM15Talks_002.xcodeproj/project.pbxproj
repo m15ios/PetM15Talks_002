@@ -15,7 +15,7 @@
 		9461C409279B47B200058CCB /* MembersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9461C407279B47B200058CCB /* MembersTableViewCell.swift */; };
 		9461C40A279B47B200058CCB /* MembersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9461C408279B47B200058CCB /* MembersTableViewCell.xib */; };
 		9464B3502775012000218D8A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9464B34F2775012000218D8A /* README.md */; };
-		94879BFD27613D1B00C0E957 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94879BFC27613D1B00C0E957 /* Storage.swift */; };
+		94879BFD27613D1B00C0E957 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94879BFC27613D1B00C0E957 /* Member.swift */; };
 		94AF5882273C413A003DCE39 /* LoginSliderItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF5881273C413A003DCE39 /* LoginSliderItems.swift */; };
 		94B36AC52738468400C77E20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B36AC42738468400C77E20 /* AppDelegate.swift */; };
 		94B36AC72738468400C77E20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B36AC62738468400C77E20 /* SceneDelegate.swift */; };
@@ -43,7 +43,7 @@
 		9461C407279B47B200058CCB /* MembersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersTableViewCell.swift; sourceTree = "<group>"; };
 		9461C408279B47B200058CCB /* MembersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MembersTableViewCell.xib; sourceTree = "<group>"; };
 		9464B34F2775012000218D8A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		94879BFC27613D1B00C0E957 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		94879BFC27613D1B00C0E957 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		94AF5881273C413A003DCE39 /* LoginSliderItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSliderItems.swift; sourceTree = "<group>"; };
 		94B36AC12738468400C77E20 /* PetM15Talks_002.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetM15Talks_002.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94B36AC42738468400C77E20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 				94AF5881273C413A003DCE39 /* LoginSliderItems.swift */,
 				94C66D36273EC50B00A4FA85 /* AppStorage.swift */,
 				94C18822275FF4C700A4D251 /* CheckField.swift */,
-				94879BFC27613D1B00C0E957 /* Storage.swift */,
+				94879BFC27613D1B00C0E957 /* Member.swift */,
 				944DC25827AB17AC00C45A25 /* Members.swift */,
 			);
 			path = Model;
@@ -295,7 +295,7 @@
 				94CA6E7F273DA68F006FC8DD /* RegistrationViewController.swift in Sources */,
 				944DC25927AB17AC00C45A25 /* Members.swift in Sources */,
 				94BB22C42739AB3A00A7B751 /* LoginSlideCollectionViewCell.swift in Sources */,
-				94879BFD27613D1B00C0E957 /* Storage.swift in Sources */,
+				94879BFD27613D1B00C0E957 /* Member.swift in Sources */,
 				94CA6E7D273DA62C006FC8DD /* AuthViewController.swift in Sources */,
 				94B36AC52738468400C77E20 /* AppDelegate.swift in Sources */,
 				94CA6E81273DA8E2006FC8DD /* MainViewController.swift in Sources */,
