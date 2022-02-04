@@ -20,7 +20,10 @@ class Members {
 
         let storage = Firestore.firestore().collection("Users")
         
-        storage.getDocuments{ queryResult, error in
+        // get result only once time
+        //storage.getDocuments{ queryResult, error in
+        // show changes in db online!
+        storage.addSnapshotListener{ queryResult, error in
             if error == nil {
                 var res = [String]()
                 if let documents = queryResult?.documents {
