@@ -118,6 +118,7 @@ class AuthViewController: ViewController {
                         break
                     default:
                         print( "error \(responce))" )
+                        self?.showAlert("Login wrong! Try again?", "Error" )
                         break
                 }
             }

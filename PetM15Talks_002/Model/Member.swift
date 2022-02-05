@@ -92,6 +92,7 @@ class Member {
     
     func loginMember( _ data: MemberFormFields, completion: @escaping (ResponseCode)->() ){
         // [weak self] - unload from memory if connect lost
+        print(data)
         Auth.auth().signIn(withEmail: data.email, password: data.password){ [weak self] result, err in
             if err == nil {
                 if result != nil {
