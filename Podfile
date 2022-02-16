@@ -4,11 +4,10 @@
 target 'PetM15Talks_002' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
-  # Pods for PetM15Talks_002
-  pod 'Firebase/Auth'
-  pod 'Firebase/Analytics'
-  pod 'Firebase/Firestore'
-
+     pod 'Firebase/Auth'
+     pod 'Firebase/Analytics'
+     pod 'Firebase/Firestore'
+  
+  pod 'MessageKit'
 
 end

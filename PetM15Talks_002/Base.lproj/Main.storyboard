@@ -243,14 +243,29 @@
                     <view key="view" contentMode="scaleToFill" id="ita-Pk-KEe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LNv-kj-Z81">
+                                <rect key="frame" x="10" y="98" width="394" height="705"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="C8U-nn-hHR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LNv-kj-Z81" firstAttribute="top" secondItem="C8U-nn-hHR" secondAttribute="top" constant="10" id="41B-Ab-RGB"/>
+                            <constraint firstItem="C8U-nn-hHR" firstAttribute="trailing" secondItem="LNv-kj-Z81" secondAttribute="trailing" constant="10" id="GyB-0Z-nHJ"/>
+                            <constraint firstItem="LNv-kj-Z81" firstAttribute="leading" secondItem="C8U-nn-hHR" secondAttribute="leading" constant="10" id="bX4-2A-R7A"/>
+                            <constraint firstItem="C8U-nn-hHR" firstAttribute="bottom" secondItem="LNv-kj-Z81" secondAttribute="bottom" constant="10" id="g1w-rF-ect"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Streams" image="message" catalog="system" selectedImage="message.fill" id="f9Z-sT-DK2"/>
+                    <navigationItem key="navigationItem" title="Streams" id="W1r-WA-bUR"/>
+                    <connections>
+                        <outlet property="streamsList" destination="LNv-kj-Z81" id="EuR-BH-Fff"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABf-lg-EKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4612" y="-331"/>
+            <point key="canvasLocation" x="5521.739130434783" y="-331.47321428571428"/>
         </scene>
         <!--My Profile-->
         <scene sceneID="Q5A-Fq-sY0">
@@ -286,7 +301,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKE-Jb-QZK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5431.884057971015" y="-331.47321428571428"/>
+            <point key="canvasLocation" x="3816" y="360"/>
         </scene>
         <!--Members-->
         <scene sceneID="GOf-RV-Tl0">
@@ -330,13 +345,32 @@
                     </tabBar>
                     <connections>
                         <segue destination="eFq-ko-cf5" kind="relationship" relationship="viewControllers" id="riC-fZ-cFH"/>
-                        <segue destination="guh-4h-r48" kind="relationship" relationship="viewControllers" id="y7m-FN-bLD"/>
+                        <segue destination="Wjf-Js-GIA" kind="relationship" relationship="viewControllers" id="y7m-FN-bLD"/>
                         <segue destination="gxD-Ti-nFZ" kind="relationship" relationship="viewControllers" id="wiR-Ld-5RS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rAy-dG-hSB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2839" y="64"/>
+        </scene>
+        <!--Streams-->
+        <scene sceneID="A5B-Ea-lJl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wjf-Js-GIA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Streams" image="message" catalog="system" selectedImage="message.fill" id="f9Z-sT-DK2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="liS-m9-CeM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="guh-4h-r48" kind="relationship" relationship="rootViewController" id="6fT-fo-NHA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MfI-O4-ljE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4611.594202898551" y="-331.47321428571428"/>
         </scene>
     </scenes>
     <resources>
