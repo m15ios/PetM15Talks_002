@@ -37,7 +37,9 @@ extension StreamsViewController: UITableViewDelegate, UITableViewDataSource {
     
     // action click by cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print( indexPath.row )
+        let vc = ChatViewController()
+        navigationController?.pushViewController(vc, animated: true)
+        //print( indexPath.row )
     }
     
     
