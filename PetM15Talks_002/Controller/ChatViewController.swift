@@ -7,6 +7,7 @@
 
 import UIKit
 import MessageKit
+import InputBarAccessoryView
 
 // for differ author
 struct Sender: SenderType {
@@ -29,6 +30,7 @@ class ChatViewController: MessagesViewController {
     // other side user
     var receiver:Sender?
     
+    var chatID: String = ""
     var messages = [Message]()
     
     override func viewDidLoad() {
@@ -48,6 +50,9 @@ class ChatViewController: MessagesViewController {
         messagesCollectionView.messagesDisplayDelegate = self
         
         showMessageTimestampOnSwipeLeft = true
+        
+        // button "send"
+        messageInputBar.delegate = self
     }
     
 }
@@ -65,5 +70,16 @@ extension ChatViewController: MessagesDisplayDelegate, MessagesLayoutDelegate, M
         return messages.count
     }
     
+    
+}
+
+extension ChatViewController: InputBarAccessoryViewDelegate {
+    
+    // button "send"
+    func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
+        messages.append( Message(sender: sender!, messageId: "5", sentDate: Date().addingTimeInterval(-1), kind: .text(text) ) )
+        inputBar.inputTextView.text = nil
+        messagesCollectionView.reloadDataAndKeepOffset()
+    }
     
 }

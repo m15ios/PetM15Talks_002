@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MessageKit
 
 class StreamsViewController: UIViewController {
 
@@ -38,9 +39,12 @@ extension StreamsViewController: UITableViewDelegate, UITableViewDataSource {
     // action click by cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ChatViewController()
+        vc.chatID = "qwerty1"
         navigationController?.pushViewController(vc, animated: true)
         //print( indexPath.row )
     }
     
     
 }
+
+
